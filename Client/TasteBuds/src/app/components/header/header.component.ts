@@ -52,6 +52,7 @@ export class HeaderComponent implements OnInit,OnDestroy{
 
   logout(){
     this.authService.logout();
+    console.log('logout');
   }
 
 }
