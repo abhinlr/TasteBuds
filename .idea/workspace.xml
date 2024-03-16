@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a92471a8-0f8c-44fe-80e6-02de15ee1911" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/guards/auth-guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/interceptor/auth-interceptor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/middleware/auth-check.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/environments/environment.development.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/environments/environment.development.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/environments/environment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/controllers/auth/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/controllers/auth/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/models/User.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +48,7 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2dgbc3Dngf1BlhqYV08gY8WvJNr" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -52,7 +61,7 @@
     "Node.js.server.js.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "<unknown>",
+    "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "18.16.0",
     "javascript.nodejs.core.library.typings.version": "18.16.20",
     "last_opened_file_path": "C:/Users/sreer/OneDrive/Documents/TasteBuds/Client/TasteBuds/src/assets",
@@ -138,6 +147,7 @@
       <workItem from="1710501491137" duration="2859000" />
       <workItem from="1710504520821" duration="17026000" />
       <workItem from="1710527140088" duration="7900000" />
+      <workItem from="1710569895353" duration="13132000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -163,6 +173,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Client/TasteBuds" />
+    </ignored-roots>
     <MESSAGE value="first commit" />
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>

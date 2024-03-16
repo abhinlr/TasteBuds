@@ -1,4 +1,4 @@
 export const apiConfig = {
-  login: '/login',
-  signUp: '/signup'
+  login: 'http://localhost:3000/login',
+  signUp: 'http://localhost:3000/signup'
 };

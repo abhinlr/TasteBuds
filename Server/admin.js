@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const authRoute = require('./routes/auth')
+const authRoute = require('./routes/auth');
 
 const app = express();
 password = '';

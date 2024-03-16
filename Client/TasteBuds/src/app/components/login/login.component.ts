@@ -14,13 +14,7 @@ export class LoginComponent {
               private authService:AuthService) { }
 
   login() {
-    this.authService.login(this.loginData)
-      .subscribe(response => {
-        if(response.success && response.data){
-          this.router.navigate(['/']);
-          console.log(response.data);
-        }
-      });
+    this.authService.login(this.loginData);
   }
 
 }

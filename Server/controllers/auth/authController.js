@@ -1,13 +1,14 @@
 const User = require('../../models/User');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 exports.signUp = async (userData) => {
-    const { username, email, password } = userData.data;
+    const { fullName, email, password } = userData.data;
 
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
         const newUser = new User({
-            username: username,
+            username: fullName,
             email: email,
             password: hashedPassword
         });
@@ -26,7 +27,6 @@ exports.login = async (userData) => {
 
     try {
         const user = await User.findOne({ email: email });
-
         if (!user) {
             throw { message: 'User not found' };
         }
@@ -36,8 +36,8 @@ exports.login = async (userData) => {
         if (!isMatch) {
             throw { message: 'Invalid credentials' };
         }
-
-        return user.email;
+        const token = jwt.sign({email:user.email,userId:user._id},'tastebuds_token_food_delivery')
+        return {token:token, user:user};
     } catch (error) {
         console.error('Error finding user:', error);
         throw error;
