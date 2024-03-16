@@ -1,0 +1,52 @@
+#banner{
+  background-color: #eee2dc !important;
+  height: 500px;
+}
+.banner-name {
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 210px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-image{
+  height: 350px;
+  right: 75%;
+  position: absolute;
+  top: 200px;
+}
+
+.pizza-image {
+  height: 350px;
+  position: relative;
+  right: 120px;
+  bottom: 200px;
+  transform: rotate(-90deg);
+}
+
+.steak-image {
+  height: 350px;
+  position: absolute;
+  top: 250px;
+  right: 5px;
+  overflow: clip;
+}
+
+.caption{
+  position: absolute;
+  top: 260px;
+  color: #123c69;
+}
+
+.banner-name .taste{
+  color: #D27995;
+}
+.banner-name .buds{
+  color: #A33C59;
+}

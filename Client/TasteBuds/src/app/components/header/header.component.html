@@ -1,0 +1,34 @@
+<section id="header">
+  <div class="header">
+    <div class="overlay" *ngIf="loginPopup || signUpPopup"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <div>
+          <a class="navbar-brand" routerLink="/">TasteBuds</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn search"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 account">
+            <li class="nav-item">
+              <a class="nav-link" (click)="openLoginPopup()">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="openSignUpPopup()">SignUp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="login" *ngIf="loginPopup">
+      <span class="close"><i class="fa-solid fa-circle-xmark" (click)="closeLoginPopup()"></i></span>
+      <app-login></app-login>
+    </div>
+    <div class="signUp" *ngIf="signUpPopup">
+      <span class="close"><i class="fa-solid fa-circle-xmark" (click)="closeSignUpPopup()"></i></span>
+      <app-signup></app-signup>
+    </div>
+  </div>
+</section>
