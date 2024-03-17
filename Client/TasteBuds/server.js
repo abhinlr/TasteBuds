@@ -3,8 +3,8 @@ const debug = require("debug")("node-angular");
 const http = require("http");
 const cors = require("cors");
 const express = require("express");
-
-const app = express();
+require('dotenv').config();
+require('./.env');
 
 const normalizePort = val => {
   var port = parseInt(val, 10);
@@ -45,7 +45,7 @@ const onListening = () => {
   debug("Listening on " + bind);
 };
 
-const port = normalizePort(process.env.PORT || "3000");
+const port = normalizePort(process.env.PORT || '3000');
 admin.set("port", port);
 
 admin.use(cors());

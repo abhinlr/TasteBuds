@@ -5,12 +5,15 @@ import {SignupComponent} from "./components/signup/signup.component";
 import {ForgotPasswordComponent} from "./components/forgot-password/forgot-password.component";
 import {MyAccountComponent} from "./components/my-account/my-account.component";
 import {AuthGuard} from "./guards/auth-guard";
+import {HomeComponent} from "./components/home/home.component";
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent},
+  { path: 'login', component: HomeComponent},
+  { path: 'signup', component: HomeComponent},
   { path: 'forgot-password', component: ForgotPasswordComponent},
   { path : 'my-account', component: MyAccountComponent,canActivate:[AuthGuard]},
+  { path: '', component:HomeComponent},
+  { path:'**',component:HomeComponent}
 ];
 
 @NgModule({

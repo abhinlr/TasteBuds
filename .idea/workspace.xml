@@ -4,31 +4,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a92471a8-0f8c-44fe-80e6-02de15ee1911" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/guards/auth-guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/interceptor/auth-interceptor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/middleware/auth-check.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="a92471a8-0f8c-44fe-80e6-02de15ee1911" name="Changes" comment="second commit">
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/common/tb-rating/tb-rating.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/common/tb-rating/tb-rating.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/common/tb-rating/tb-rating.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/common/tb-rating/tb-rating.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/restaurant.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/restaurant.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/site.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/site.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/assets/top-items/burger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/assets/top-items/eggbacon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/assets/top-items/fishsalad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/assets/top-items/pasta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/proxy.conf.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/controllers/restaurant/restaurantController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/models/Verification.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/routes/restaurant.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/forgot-password/forgot-password.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/forgot-password/forgot-password.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/forgot-password/forgot-password.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/forgot-password/forgot-password.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/my-account.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/my-account.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/my-account.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/my-account.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/signup/signup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/signup/signup.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/signup/signup.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/signup/signup.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/signup/signup.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/guards/auth-guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/guards/auth-guard.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/controllers/auth/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/controllers/auth/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/middleware/auth-check.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/middleware/auth-check.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -38,11 +74,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Client/TasteBuds/src/app/guards/auth-guard.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Server/controllers/auth/authController.js" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -55,29 +95,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Node.js.server.js.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "18.16.0",
-    "javascript.nodejs.core.library.typings.version": "18.16.20",
-    "last_opened_file_path": "C:/Users/sreer/OneDrive/Documents/TasteBuds/Client/TasteBuds/src/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.ng.executor": "Run",
-    "npm.start.executor": "Run",
-    "npm.watch.executor": "Run",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "C:\\Users\\sreer\\OneDrive\\Documents\\TasteBuds\\Client\\TasteBuds\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Node.js.server.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.16.20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sreer/OneDrive/Documents/TasteBuds/Client/TasteBuds/src/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.ng.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.watch.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\sreer\\OneDrive\\Documents\\TasteBuds\\Client\\TasteBuds\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\sreer\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="8e85db7a-d917-432d-8457-fd723c58c025" reportId="TasteBuds/qodana/2024-03-15" />
@@ -147,7 +188,11 @@
       <workItem from="1710501491137" duration="2859000" />
       <workItem from="1710504520821" duration="17026000" />
       <workItem from="1710527140088" duration="7900000" />
-      <workItem from="1710569895353" duration="13132000" />
+      <workItem from="1710569895353" duration="13988000" />
+      <workItem from="1710584801464" duration="21584000" />
+      <workItem from="1710612439380" duration="758000" />
+      <workItem from="1710650703223" duration="13797000" />
+      <workItem from="1710666386413" duration="17865000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -165,11 +210,54 @@
       <option name="project" value="LOCAL" />
       <updated>1710522889560</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="second commit">
+      <option name="closed" value="true" />
+      <created>1710583949306</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710583949307</updated>
+    </task>
+    <task id="LOCAL-00004" summary="second commit">
+      <option name="closed" value="true" />
+      <created>1710584260565</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710584260566</updated>
+    </task>
+    <task id="LOCAL-00005" summary="second commit">
+      <option name="closed" value="true" />
+      <created>1710584897381</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710584897381</updated>
+    </task>
+    <task id="LOCAL-00006" summary="second commit">
+      <option name="closed" value="true" />
+      <created>1710584909391</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710584909391</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -177,6 +265,7 @@
       <path value="$PROJECT_DIR$/Client/TasteBuds" />
     </ignored-roots>
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
 </project>

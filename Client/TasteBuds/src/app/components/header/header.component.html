@@ -1,10 +1,14 @@
-<section id="header">
+<section id="header" [ngClass]="{ 'sticky': isSticky }">
   <div class="header">
     <div class="overlay" *ngIf="loginPopup || signUpPopup"></div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <div>
           <a class="navbar-brand" routerLink="/">TasteBuds</a>
+        </div>
+        <div class="location">
+          <h6 *ngIf="locationData"><span><i class="fa-solid fa-location-dot">&nbsp;</i></span>{{locationData.place +', '+ locationData.state}}</h6>
+          <span *ngIf="!locationData"><i class="fa-solid fa-location-dot" (click)="getLocation()"></i></span>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <form class="d-flex" role="search">
@@ -29,11 +33,11 @@
       </div>
     </nav>
     <div class="login" *ngIf="loginPopup">
-      <span class="close"><i class="fa-solid fa-circle-xmark" (click)="closeLoginPopup()"></i></span>
+      <span class="close"><i class="fa-solid fa-circle-xmark" (click)="closePopup()" routerLink="/"></i></span>
       <app-login></app-login>
     </div>
     <div class="signUp" *ngIf="signUpPopup">
-      <span class="close"><i class="fa-solid fa-circle-xmark" (click)="closeSignUpPopup()"></i></span>
+      <span class="close"><i class="fa-solid fa-circle-xmark" (click)="closePopup()" routerLink="/"></i></span>
       <app-signup></app-signup>
     </div>
   </div>

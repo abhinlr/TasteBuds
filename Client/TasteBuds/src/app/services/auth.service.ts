@@ -40,10 +40,16 @@ export class AuthService {
       this.authStatusListener.next(true);
       this.setUserObject(authData.user);
     }
-
   }
   signUp(signUpData:any){
     return this.http.post<any>(apiConfig.signUp, { data : signUpData});
+  }
+  sendOtpEmail(email:any){
+    return this.http.post<any>(apiConfig.sendEmail,{email:email});
+  }
+
+  verifyEmail(otp:number,email:string){
+    return this.http.post<any>(apiConfig.verifyEmail,{otp:otp,email:email});
   }
 
   getAuthStatus(){

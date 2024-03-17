@@ -16,6 +16,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { CategoryComponent } from './components/category/category.component';
 import {NgOptimizedImage} from "@angular/common";
 import {AuthInterceptor} from "./interceptor/auth-interceptor";
+import { TbRatingComponent } from './common/tb-rating/tb-rating.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {AuthInterceptor} from "./interceptor/auth-interceptor";
     MyAccountComponent,
     ForgotPasswordComponent,
     CartComponent,
-    CategoryComponent
+    CategoryComponent,
+    TbRatingComponent,
   ],
   imports: [
     BrowserModule,

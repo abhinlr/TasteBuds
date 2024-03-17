@@ -1,4 +1,8 @@
 export const apiConfig = {
-  login: 'http://localhost:3000/login',
-  signUp: 'http://localhost:3000/signup'
+  login: 'api/login',
+  signUp: 'api/signup',
+  sendEmail:'api/sendEmailOtp',
+  verifyEmail:'api/verifyOtp',
+  getLocation:'api/getLocationInfo',
+  getAllRestaurants:'api/getRestaurants'
 };

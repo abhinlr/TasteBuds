@@ -1,1 +1,147 @@
-<p>my-account works!</p>
+<div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+  <!-- Vertical Navbar -->
+  <nav class="navbar show navbar-vertical navbar-expand-lg px-0 py-3 py-lg-0 navbar-light bg-light border-end-lg" id="navbarVertical">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="sidebarCollapse">
+        <!-- Navigation -->
+        <ul class="navbar-nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-house"></i> Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-bar-chart"></i> Analytics
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-chat"></i> Messages
+              <span class="badge bg-opacity-30 bg-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">6</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-bookmarks"></i> Collections
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-people"></i> Users
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+    <!-- Header -->
+    <header class="bg-surface-primary border-bottom pt-6">
+      <div class="container-fluid">
+        <div class="mb-npx">
+          <div class="row align-items-center">
+            <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+              <!-- Title -->
+              <h1 class="h2 mb-0 ls-tight">Account Settings</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main -->
+    <main class="py-6 bg-surface-secondary">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-7 mx-auto">
+            <!-- Profile picture -->
+            <div class="card shadow-sm border mt-4 mb-5">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="avatar avatar-lg bg-warning rounded-circle text-white">
+                        <img alt="..." src="https://images.unsplash.com/photo-1579463148228-138296ac3b98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="rounded-circle">
+                      </a>
+
+                      <div class="ms-3">
+                        <span class="h4 d-block mb-0">Julianne Moore</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ms-auto">
+                    <button type="button" class="btn btn-sm btn-secondary">Upload</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <div class="mb-3">
+              <h5 class="mb-0">Contact Information</h5>
+            </div>
+            <form class="mb-5">
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="first_name">First name</label>
+                  <input type="text" class="form-control" id="first_name">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="last_name">Last name</label>
+                  <input type="text" class="form-control" id="last_name">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="email">Email</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="phone_number">Phone number</label>
+                  <input type="tel" class="form-control" id="phone_number">
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="address">Address</label>
+                  <input type="text" class="form-control" id="address">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="city">City</label>
+                  <input type="text" class="form-control" id="city">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="zip">ZIP</label>
+                  <input type="tel" class="form-control" id="zip">
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-sm btn-secondary me-2">Cancel</button>
+                <button type="submit" class="btn btn-sm btn-primary">Save</button>
+              </div>
+            </form>
+
+            <hr class="my-10" />
+            <div class="row g-6 mb-5">
+              <div class="col-md-12">
+                <div class="card shadow border-0">
+                  <div class="card-body d-flex align-items-center">
+                    <div>
+                      <h5 class="text-danger mb-2">Deactivate account</h5>
+                      <p class="text-sm text-muted">
+                        Once you delete your account, there is no going back. Please be certain.
+                      </p>
+                    </div>
+                    <div class="ms-auto">
+                      <button type="button" class="btn btn-sm btn-danger">Deactivate</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

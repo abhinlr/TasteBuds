@@ -8,14 +8,22 @@
       </div>
       <div class="row justify-content-center signUp-form">
         <div class="col-md-6">
-          <form (ngSubmit)="signup()" #signUpForm="ngForm">
+          <form #verifyEmailForm="ngForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="userEmail" [disabled]="otpVerified">
+            </div>
+            <button type="submit" class="btn btn-primary" *ngIf="!otpSend && !otpVerified" (click)="sendOtp()">Send OTP</button>
+            <div class="mb-3" *ngIf="otpSend">
+              <label for="confirmPassword" class="form-label">OTP</label>
+              <input type="number" class="form-control" id="otp" name="otp" required [(ngModel)]="otp">
+            </div>
+            <button type="submit" class="btn btn-primary" *ngIf="otpSend" (click)="verifyOtp()">Verify OTP</button>
+          </form>
+          <form (ngSubmit)="signup()" #signUpForm="ngForm" *ngIf="otpVerified">
             <div class="mb-3">
               <label for="firstName" class="form-label">Full Name</label>
               <input type="text" class="form-control" id="firstName" name="firstName" required [(ngModel)]="signUpData.fullName">
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="signUpData.email">
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Password</label>
@@ -25,7 +33,7 @@
               <label for="confirmPassword" class="form-label">Confirm Password</label>
               <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required [(ngModel)]="signUpData.confirmPassword">
             </div>
-            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button type="submit" class="btn btn-primary" (click)="signup">Sign Up</button>
           </form>
 
         </div>

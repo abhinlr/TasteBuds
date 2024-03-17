@@ -1,6 +1,6 @@
 nav{
   background-color: #eee2dc !important;
-  padding: 20px 250px;
+  padding: 20px 150px;
 
 }
 .search-bar{
@@ -16,6 +16,7 @@ button.search{
 
 ul.account {
   margin-right: 0 !important;
+  width: 185px;
 }
 
 a{
@@ -72,3 +73,16 @@ a{
 .nav-link{
   cursor: pointer;
 }
+.location{
+  position: absolute;
+  left: 350px;
+  width: 150px;
+}
+.location h6{
+  color: gray;
+  top: 10px;
+}
+.location span i{
+  font-size: 22px;
+}
+

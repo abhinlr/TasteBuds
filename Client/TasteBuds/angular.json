@@ -76,7 +76,8 @@
               "browserTarget": "TasteBuds:build:production"
             },
             "development": {
-              "browserTarget": "TasteBuds:build:development"
+              "browserTarget": "TasteBuds:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

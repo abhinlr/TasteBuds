@@ -1,3 +1,82 @@
-#home{
+#home {
   height: 1000px;
+}
+
+.row {
+  padding: 10px 0;
+}
+
+.card {
+  display: ruby;
+  margin: 40px 20px;
+  width: 18rem;
+  height: 450px;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+#home {
+  background-color: #E2F1F4;
+}
+
+.card img {
+  margin: 20px 10px 0 10px;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  position: relative !important;
+  object-position: center;
+}
+
+.card .bg-colour {
+  top: 18px;
+  left: 18px;
+  border-radius: 30px;
+  position: absolute;
+  background-color: #eee2dc;
+  width: 250px;
+  height: 150px;
+}
+
+.card-body {
+  padding: 0 16px !important;
+}
+
+.rating {
+  position: relative;
+}
+
+.card-title {
+  font-family: "Bodoni", Sans, serif;
+  font-size: 22px;
+  font-weight: 500;
+  position: relative;
+  bottom: 10px;
+}
+
+.description {
+  position: relative;
+  top: 30px;
+}
+
+.price {
+  position: relative;
+  top: 20px;
+}
+
+.price h3 {
+  font-family: 'Optima', serif;
+}
+
+.addtocart i {
+  font-size: 45px;
+  float: right !important;
+  position: relative;
+  left: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1); /* Zoom out effect on hover */
 }

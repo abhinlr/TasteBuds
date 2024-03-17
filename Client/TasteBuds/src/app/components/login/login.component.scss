@@ -11,6 +11,7 @@ button{
   float: right;
   left: 145px;
   position: relative;
+  margin: 10px 0;
 }
 
 .heading{
@@ -19,5 +20,12 @@ button{
 input{
   background-color: #e5e5e5;
   color: #e5e5e5;
+}
+.row p{
+  padding: 0 30px;
+  position: relative;
+  bottom: 40px;
+  cursor: pointer;
+  color: #123c69;
 }
 
