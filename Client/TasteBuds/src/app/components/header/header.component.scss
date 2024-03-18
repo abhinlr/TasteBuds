@@ -1,6 +1,6 @@
 nav{
   background-color: #eee2dc !important;
-  padding: 20px 150px;
+  padding: 30px 50px;
 
 }
 .search-bar{
@@ -33,6 +33,7 @@ a{
 .navbar-brand{
   font-size: 30px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .login,.signUp {
@@ -84,5 +85,13 @@ a{
 }
 .location span i{
   font-size: 22px;
+}
+
+.container-fluid{
+  opacity: 0.8;
+  z-index: 9;
+  border-radius: 50px;
+  background-color: #ffffff;
+  height: 100px;
 }
 

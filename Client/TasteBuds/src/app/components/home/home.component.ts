@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, AfterViewInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
@@ -6,9 +6,11 @@ import {ActivatedRoute} from "@angular/router";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent{
+export class HomeComponent implements AfterViewInit{
 
   constructor(private route:ActivatedRoute) {}
 
+  ngAfterViewInit(): void {
+  }
 
 }

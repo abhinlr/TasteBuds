@@ -1,5 +1,6 @@
 #home {
-  height: 1000px;
+  height: auto;
+  background-color: #E2F1F4;
 }
 
 .row {
@@ -13,10 +14,6 @@
   height: 450px;
   border-radius: 30px;
   transition: transform 0.3s ease;
-}
-
-#home {
-  background-color: #E2F1F4;
 }
 
 .card img {
@@ -59,13 +56,10 @@
   top: 30px;
 }
 
-.price {
-  position: relative;
-  top: 20px;
-}
-
 .price h3 {
   font-family: 'Optima', serif;
+  position: relative;
+  top: 20px;
 }
 
 .addtocart i {
@@ -77,6 +71,142 @@
   cursor: pointer;
 }
 
+.addtocart i:hover,.add i:hover{
+  color: #E84242;
+  animation: rotateAnimation 0.7s linear;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
 .card:hover {
   transform: scale(1.1); /* Zoom out effect on hover */
+}
+
+h1 {
+  font-family: 'Rakkas', serif;
+  font-size: 75px;
+  font-weight: bold;
+}
+#trending{
+  position: relative;
+  bottom: 120px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.carousel{
+  padding: 0!important;
+}
+
+.svg-container {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.carousel-indicators button {
+  width: 10px; /* Adjust the width of each button */
+  height: 10px; /* Adjust the height of each button */
+  border-radius: 50%; /* Make the buttons circular */
+  border: 2px solid whitesmoke; /* Add border */
+  background-color: transparent; /* Remove background color */
+  margin: 0 10px; /* Adjust spacing between buttons */
+  cursor: pointer;
+  position: relative;
+  bottom: 50px;
+}
+
+.carousel-indicators button.active {
+  background-color: white; /* Change background color of active button */
+}
+
+.carousel-indicators button:focus {
+  outline: none; /* Remove outline when button is focused */
+}
+
+.carousel-indicators button.active::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  margin: 0 30px;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #E2F1F4;
+}
+
+.carousel-item img{
+  object-fit: none;
+}
+
+.carousel-content{
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+.block-line{
+  display: block;
+}
+.add-box{
+  background-color: white;
+  border-radius: 60px;
+  height: 80px;
+  width: 200px;
+  position: relative;
+  top: 50px;
+  left: 10px;
+}
+.add i{
+  font-size: 60px;
+  position: relative;
+  left: 15px;
+  top: 0;
+  cursor: pointer;
+}
+.price-trending h3{
+  bottom: 40px;
+  top: 0;
+  left: 30px;
+  font-family: "Inter",Arial,Helvetica,sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+.price-trending p{
+  position: absolute;
+  left: 24px;
+  bottom: 0px;
 }
