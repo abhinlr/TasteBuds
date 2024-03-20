@@ -17,6 +17,8 @@ import { CategoryComponent } from './components/category/category.component';
 import {NgOptimizedImage} from "@angular/common";
 import {AuthInterceptor} from "./interceptor/auth-interceptor";
 import { TbRatingComponent } from './common/tb-rating/tb-rating.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { TbRatingComponent } from './common/tb-rating/tb-rating.component';
     CartComponent,
     CategoryComponent,
     TbRatingComponent,
+    OrdersComponent,
+    FavouritesComponent,
   ],
   imports: [
     BrowserModule,

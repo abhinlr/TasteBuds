@@ -1,147 +1,162 @@
-<div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
-  <!-- Vertical Navbar -->
-  <nav class="navbar show navbar-vertical navbar-expand-lg px-0 py-3 py-lg-0 navbar-light bg-light border-end-lg" id="navbarVertical">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="sidebarCollapse">
-        <!-- Navigation -->
-        <ul class="navbar-nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="bi bi-house"></i> Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="bi bi-bar-chart"></i> Analytics
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="bi bi-chat"></i> Messages
-              <span class="badge bg-opacity-30 bg-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">6</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="bi bi-bookmarks"></i> Collections
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="bi bi-people"></i> Users
-            </a>
-          </li>
-        </ul>
+<section style="background-color: #eee;">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-lg-0 mb-4">
+          <div class="card-body p-0">
+            <ul class="list-group list-group-flush rounded-3">
+              <li class="list-group-item d-flex justify-content-center align-items-center p-3 text-center">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <p class="mb-0">Orders</p>
+              </li>
+              <li class="list-group-item d-flex justify-content-center align-items-center p-3">
+                <i class="fa-solid fa-star"></i>
+                <p class="mb-0">Favourites</p>
+              </li>
+              <li class="list-group-item d-flex justify-content-center align-items-center p-3">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="mb-0">Address</p>
+              </li>
+              <li class="list-group-item d-flex justify-content-center align-items-center p-3">
+                <i class="fa-solid fa-gear"></i>
+                <p class="mb-0">Account Settings</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="card mb-4 mt-5">
+          <div class="card-body text-center">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                 class="rounded-circle img-fluid" style="width: 150px;">
+            <h5 class="my-3">{{userObject.username}}</h5>
+            <p class="text-muted mb-1">{{userObject.email}}</p>
+            <div class="d-flex justify-content-center mb-2">
+              <button type="button" class="btn btn-primary mx-2">Edit Profile</button>
+              <button type="button" class="btn btn-secondary mx-2">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Full Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">Johnatan Smith</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">example@example.com</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Phone</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">(097) 234-5678</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Mobile</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">(098) 765-4321</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Address</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-4 mb-md-0">
+              <div class="card-body">
+                <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
+                </p>
+                <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                       aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                       aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                       aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                       aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                <div class="progress rounded mb-2" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                       aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-4 mb-md-0">
+              <div class="card-body">
+                <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
+                </p>
+                <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                       aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                       aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                       aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                       aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                <div class="progress rounded mb-2" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                       aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
-
-  <!-- Main content -->
-  <div class="h-screen flex-grow-1 overflow-y-lg-auto">
-    <!-- Header -->
-    <header class="bg-surface-primary border-bottom pt-6">
-      <div class="container-fluid">
-        <div class="mb-npx">
-          <div class="row align-items-center">
-            <div class="col-sm-6 col-12 mb-4 mb-sm-0">
-              <!-- Title -->
-              <h1 class="h2 mb-0 ls-tight">Account Settings</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- Main -->
-    <main class="py-6 bg-surface-secondary">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-7 mx-auto">
-            <!-- Profile picture -->
-            <div class="card shadow-sm border mt-4 mb-5">
-              <div class="card-body">
-                <div class="d-flex align-items-center">
-                  <div>
-                    <div class="d-flex align-items-center">
-                      <a href="#" class="avatar avatar-lg bg-warning rounded-circle text-white">
-                        <img alt="..." src="https://images.unsplash.com/photo-1579463148228-138296ac3b98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="rounded-circle">
-                      </a>
-
-                      <div class="ms-3">
-                        <span class="h4 d-block mb-0">Julianne Moore</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ms-auto">
-                    <button type="button" class="btn btn-sm btn-secondary">Upload</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Form -->
-            <div class="mb-3">
-              <h5 class="mb-0">Contact Information</h5>
-            </div>
-            <form class="mb-5">
-              <div class="row mb-3">
-                <div class="col-md-6">
-                  <label class="form-label" for="first_name">First name</label>
-                  <input type="text" class="form-control" id="first_name">
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label" for="last_name">Last name</label>
-                  <input type="text" class="form-control" id="last_name">
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col-md-6">
-                  <label class="form-label" for="email">Email</label>
-                  <input type="email" class="form-control" id="email">
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label" for="phone_number">Phone number</label>
-                  <input type="tel" class="form-control" id="phone_number">
-                </div>
-                <div class="col-12">
-                  <label class="form-label" for="address">Address</label>
-                  <input type="text" class="form-control" id="address">
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label" for="city">City</label>
-                  <input type="text" class="form-control" id="city">
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label" for="zip">ZIP</label>
-                  <input type="tel" class="form-control" id="zip">
-                </div>
-              </div>
-              <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-sm btn-secondary me-2">Cancel</button>
-                <button type="submit" class="btn btn-sm btn-primary">Save</button>
-              </div>
-            </form>
-
-            <hr class="my-10" />
-            <div class="row g-6 mb-5">
-              <div class="col-md-12">
-                <div class="card shadow border-0">
-                  <div class="card-body d-flex align-items-center">
-                    <div>
-                      <h5 class="text-danger mb-2">Deactivate account</h5>
-                      <p class="text-sm text-muted">
-                        Once you delete your account, there is no going back. Please be certain.
-                      </p>
-                    </div>
-                    <div class="ms-auto">
-                      <button type="button" class="btn btn-sm btn-danger">Deactivate</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
   </div>
-</div>
+</section>
