@@ -1,0 +1,32 @@
+.header h4 {
+  text-transform: uppercase;
+}
+
+.container {
+  padding: 10px 40px 10px 100px;
+  min-height: 500px;
+}
+
+td img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+td {
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+td input{
+  padding: 0 !important;
+  margin: 0!important;
+  width: 20px;
+}
+
+.custom-table {
+  background-color: #eee2dc;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-color: var(--bs-table-border-color);
+}

@@ -16,14 +16,12 @@ export class LoginComponent {
               private siteService:SiteService) { }
 
   login() {
+    console.log('log');
     this.siteService.loading.next(true);
     this.authService.login(this.loginData);
     setTimeout(()=>{
       this.siteService.loading.next(false);
     },1000);
-
-
-
   }
 
 }

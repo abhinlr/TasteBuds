@@ -1,0 +1,42 @@
+<section id="restaurant-details">
+  <div class="restaurant-details">
+    <div class="container">
+      <div class="row main">
+        <div class="restaurant">
+          <h5>{{restaurantDetails?.name}}</h5>
+          <div class="rating">
+            <app-tb-rating [ratingValue]='roundRatingValue(restaurantDetails?.avgRating)'></app-tb-rating>
+          </div>
+          <p>{{restaurantDetails?.areaName}}</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row main">
+        <div class="recommended">
+          <h5>Recommended Items</h5>
+          <div class="items">
+            <div class="item">
+              <div class="row" *ngFor="let item of recommendedItems">
+                <div class="col-md-2 border-right">
+                  <img [src]="'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/' + item.card.info.imageId" alt="Restaurant Image">
+                </div>
+                <div class="col-md-8 d-flex flex-column align-items-center justify-content-center">
+                  <h5 class="text-center">{{ item.card.info.name }}</h5>
+                  <p>{{ item.card.info.description }}</p>
+                </div>
+                <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
+                  <h5 class="text-center">&#8377;{{ item.card.info.price ? slicePrice(item.card.info.price) : slicePrice(item.card.info.defaultPrice) }}</h5>
+                  <div class="addtocart col-md-6">
+                    <i class="fa-solid fa-circle-plus" (click)="addToCart(item.card.info)"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

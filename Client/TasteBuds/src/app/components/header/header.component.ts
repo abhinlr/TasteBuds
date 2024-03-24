@@ -41,7 +41,6 @@ export class HeaderComponent implements OnInit,OnDestroy{
           this.userObject =this.authService.getUserObject();
         }
       });
-    this.authService.authUser();
     this.getLocation();
   }
 

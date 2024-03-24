@@ -4,25 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a92471a8-0f8c-44fe-80e6-02de15ee1911" name="Changes" comment="bsdgaskhfsdjlhf">
+    <list default="true" id="a92471a8-0f8c-44fe-80e6-02de15ee1911" name="Changes" comment="restaurant and menu">
       <change afterPath="$PROJECT_DIR$/Client/TasteBuds/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/models/Cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/controllers/cart/cartController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/models/Product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/passport-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/routes/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/common/tb-rating/tb-rating.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/common/tb-rating/tb-rating.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/common/tb-rating/tb-rating.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/common/tb-rating/tb-rating.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/common/tb-rating/tb-rating.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/common/tb-rating/tb-rating.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/interceptor/auth-interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/interceptor/auth-interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/restaurant.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/restaurant.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/controllers/auth/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/controllers/auth/authController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/controllers/restaurant/restaurantController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/controllers/restaurant/restaurantController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/routes/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/restaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +172,9 @@
       <workItem from="1710936051672" duration="1630000" />
       <workItem from="1710992032987" duration="8000" />
       <workItem from="1711184597598" duration="29599000" />
-      <workItem from="1711252312465" duration="1718000" />
+      <workItem from="1711252312465" duration="4223000" />
+      <workItem from="1711256668772" duration="23221000" />
+      <workItem from="1711284525312" duration="4574000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -242,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710947900240</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="restaurant and menu">
+      <option name="closed" value="true" />
+      <created>1711254153780</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711254153780</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +283,7 @@
     <MESSAGE value="login and other ui changes" />
     <MESSAGE value="banner on home screen" />
     <MESSAGE value="bsdgaskhfsdjlhf" />
-    <option name="LAST_COMMIT_MESSAGE" value="bsdgaskhfsdjlhf" />
+    <MESSAGE value="restaurant and menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="restaurant and menu" />
   </component>
 </project>

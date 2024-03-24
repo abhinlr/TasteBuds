@@ -1,0 +1,61 @@
+.row.main{
+  padding: 10px 250px;
+}
+.rating{
+  position: absolute;
+  right: 95px;
+  top: 10px;
+}
+.restaurant{
+  position: relative;
+}
+.item .row{
+  height: 130px;
+  padding: 5px;
+  background-color: #E2F1F4;
+  margin: 20px 0;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+.item .row:hover{
+  transform: scale(1.1);
+}
+
+.col-md-2 img{
+  width: 110px;
+  height: 110px;
+  border-radius: 10px;
+  position: relative;
+  bottom: 7px;
+}
+.border-right {
+  border-right: 1px solid #000;
+  height: 80%;
+  margin: auto;
+}
+.col-md-8 p{
+  font-size: 12px;
+  max-height: 50px;
+  overflow: hidden;
+}
+.addtocart i {
+  font-size: 45px;
+  float: right !important;
+  position: relative;
+  left: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.addtocart i:hover{
+  color: #E84242;
+  animation: rotateAnimation 0.7s linear;
+}
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}

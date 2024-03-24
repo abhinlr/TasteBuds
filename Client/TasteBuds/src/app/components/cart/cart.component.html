@@ -1,1 +1,46 @@
-<p>cart works!</p>
+<section id="cart">
+  <div class="cart">
+    <div class="container">
+      <div class="row">
+        <div class="header">
+          <h4>Cart</h4>
+        </div>
+      </div>
+      <div class="row cart-table mt-5">
+        <div class="col-md-8">
+          <table class="table-responsive table-striped table-hover custom-table" style="width: 100%; background-color: #eee2dc;">
+            <tbody>
+            <tr *ngFor="let item of cartItems">
+              <td><img [src]="'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/'+item.product.imageUrl" alt="Product Image" class="img-thumbnail"></td>
+              <td>
+                <h5>{{item.product.name}}</h5>
+                <span>{{item.product.price}}</span>
+              </td>
+              <td>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button" (click)="decrementQuantity(item)">-</button>
+                  </div>
+                  <input type="text" class="form-control text-center" value="{{item.quantity}}" readonly>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" (click)="incrementQuantity(item)">+</button>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <button class="btn btn-danger" (click)="deleteItem(item)">Delete</button>
+              </td>
+            </tr>
+
+            <!-- Add more rows for additional products in the cart -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

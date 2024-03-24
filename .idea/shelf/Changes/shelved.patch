@@ -1,0 +1,19 @@
+Index: Server/admin.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const express = require('express');\r\nconst cors = require('cors');\r\nconst bodyParser = require('body-parser');\r\nconst mongoose = require('mongoose');\r\nconst authRoute = require('./routes/auth');\r\n\r\nconst app = express();\r\npassword = '';\r\n\r\nconst db = 'mongodb+srv://tastebuds:......@cluster0.htvoug9.mongodb.net/TasteBuds?retryWrites=true&w=majority&appName=Cluster0'\r\n\r\n\r\nmongoose.connect(db).then(() => console.log('Database connection successful')).catch(err => console.error('MongoDB connection error:', err));\r\n\r\napp.use(express.json());\r\napp.use(bodyParser.json());\r\napp.use(bodyParser.urlencoded({extended: false}));\r\napp.use(cors({\r\n    origin: 'http://localhost:4200'\r\n}));\r\n\r\napp.post('/signUp',authRoute);\r\napp.post('/login', authRoute);\r\n\r\n\r\n\r\nmodule.exports = app;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Server/admin.js b/Server/admin.js
+--- a/Server/admin.js	(revision fcdbdab9db06928e677b7526ef0fb7cf8a570b96)
++++ b/Server/admin.js	(date 1710584377606)
+@@ -7,7 +7,7 @@
+ const app = express();
+ password = '';
+ 
+-const db = 'mongodb+srv://tastebuds:......@cluster0.htvoug9.mongodb.net/TasteBuds?retryWrites=true&w=majority&appName=Cluster0'
++const db = 'mongodb+srv://tastebuds:tastebuds@cluster0.htvoug9.mongodb.net/TasteBuds?retryWrites=true&w=majority&appName=Cluster0'
+ 
+ 
+ mongoose.connect(db).then(() => console.log('Database connection successful')).catch(err => console.error('MongoDB connection error:', err));

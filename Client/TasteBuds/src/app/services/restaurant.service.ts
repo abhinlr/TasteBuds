@@ -56,6 +56,32 @@ export class RestaurantService {
     })
   }
 
+  addItemTocart(data:any):Promise<any>{
+    console.log('data', data);
+    return new Promise<any>((resolve, reject)=>{
+      this.http.post<any>(apiConfig.addToCart, data)
+        .subscribe((response)=>{
+          if(response.success &&response.data){
+            resolve(response);
+          }else{
+            reject(response);
+          }
+        })
+    })
+  }
+
+  fetchCart():Promise<any>{
+    return new Promise<any>((resolve, reject)=>{
+      this.http.get<any>(apiConfig.fetchCart)
+        .subscribe((response)=>{
+          if(response.success &&response.data){
+            resolve(response);
+          }else{
+            reject(response);
+          }
+        })
+    })
+  }
 
 
 

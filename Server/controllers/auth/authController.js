@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 require('../../../Client/TasteBuds/.env');
+const passport = require("passport");
 
 exports.signUp = async (userData) => {
     const {fullName, email, password} = userData.data;
@@ -27,26 +28,30 @@ exports.signUp = async (userData) => {
 };
 
 exports.login = async (userData) => {
-    const {email, password} = userData.data;
-
-    try {
-        const user = await User.findOne({email: email});
-        if (!user) {
-            throw {message: 'User not found'};
-        }
-
-        const isMatch = await bcrypt.compare(password, user.password);
-
-        if (!isMatch) {
-            throw {message: 'Invalid credentials'};
-        }
-        const token = jwt.sign({email: user.email, userId: user._id}, process.env.SECRET)
-        return {token: token, user: user};
-    } catch (error) {
-        console.error('Error finding user:', error);
-        throw error;
-    }
+    const { email, password } = userData;
+    return new Promise((resolve, reject) => {
+        passport.authenticate('local', (err, user, info) => {
+            if (err) {
+                return reject(err);
+            }
+            if (!user) {
+                return reject({ message: info.message });
+            }
+            resolve(user);
+        })({ body: { email, password } }, {}, () => {});
+    });
 };
+
+exports.fetchProfile= (session) => {
+    return new Promise((resolve, reject) => {
+        if (!session || !session.user) {
+            reject(new Error('User session not found'));
+            return;
+        }
+        const userData = session.user;
+        resolve(userData);
+    });
+}
 
 exports.sendEmailOtp = async (data) => {
     const email = data.email;

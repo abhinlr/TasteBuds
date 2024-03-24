@@ -1,0 +1,87 @@
+<section id="restaurant">
+  <div class="restaurant">
+    <div class="container">
+      <div class="row">
+          <div class="col-12">
+            <div class="header">
+              <ul class="nav nav-pills justify-content-between">
+                <li class="nav-item">
+                  <a class="nav-link"><i class="fa-solid fa-star"></i>&nbsp;Top Rated</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"><i class="fa-solid fa-location-dot"></i> &nbsp;Nearby</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"><i class="fa-solid fa-certificate"></i> &nbsp;Best Seller</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"><i class="fa-solid fa-bowl-food"></i>&nbsp;Newcomers</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr>
+      <div  id="top-rated">
+        <div class="row">
+          <div class="button-container">
+            <button class="arrow right" (click)="moveCards('right')"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="arrow left" (click)="moveCards('left')"><i class="fa-solid fa-arrow-left"></i></button>
+          </div>
+        </div>
+        <div class="row best">
+          <div class="card-wrapper">
+            <div class="card-container">
+              <div class="cards" *ngFor="let restaurant of bestRestaurants" [routerLink]="'/restaurant/' + restaurant.info.id">
+                <div class="image">
+                  <img [src]="'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/' + restaurant.info.cloudinaryImageId" alt="Restaurant Image">
+                  <div class="overlay"></div>
+                  <div class="in-image">
+                    <h6>Restaurant</h6>
+                    <h5>{{ restaurant.info.name }}</h5>
+                    <div class="rating">
+                      <app-tb-rating [ratingValue]='roundRatingValue(restaurant.info.avgRating)'></app-tb-rating>
+                    </div>
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="cuisines">
+                    <p>{{ restaurant.info.cuisines.join(', ') }}</p>
+                    <h5>{{restaurant.info.aggregatedDiscountInfoV3?.header}}&nbsp;<span>{{restaurant.info.aggregatedDiscountInfoV3?.subHeader}}</span></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--      <div  id="nearby">-->
+<!--        <div class="row near">-->
+<!--          <div class="card-wrapper">-->
+<!--            <div class="card-container">-->
+<!--              <div class="cards" *ngFor="let restaurant of bestRestaurants" (click)="getRestautantMenu(restaurant.info.id)">-->
+<!--                <div class="image">-->
+<!--                  <img [src]="'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/' + restaurant.info.cloudinaryImageId" alt="Restaurant Image">-->
+<!--                  <div class="overlay"></div>-->
+<!--                  <div class="in-image">-->
+<!--                    <h6>Restaurant</h6>-->
+<!--                    <h5>{{ restaurant.info.name }}</h5>-->
+<!--                    <div class="rating">-->
+<!--                      <app-tb-rating [ratingValue]='roundRatingValue(restaurant.info.avgRating)'></app-tb-rating>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="description">-->
+<!--                  <div class="cuisines">-->
+<!--                    <p>{{ restaurant.info.cuisines.join(', ') }}</p>-->
+<!--                    <h5>{{restaurant.info.aggregatedDiscountInfoV3?.header}}&nbsp;<span>{{restaurant.info.aggregatedDiscountInfoV3?.subHeader}}</span></h5>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+    </div>
+  </div>
+</section>
