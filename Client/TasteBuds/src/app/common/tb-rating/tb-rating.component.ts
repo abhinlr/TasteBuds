@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tb-rating',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./tb-rating.component.scss']
 })
 export class TbRatingComponent {
-
+  @Input() ratingValue: number = 0;
 }

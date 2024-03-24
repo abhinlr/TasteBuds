@@ -22,11 +22,11 @@ export class AppComponent implements OnInit{
     });
     this.siteService.loading.next(true);
     this.authService.authUser();
-    setTimeout(()=>{
-      this.loading = false;
-    },1000);
-    this.siteService.loading.subscribe(data => {
-      this.loading = data;
-    });
+    // setTimeout(()=>{
+    //   this.loading = false;
+    // },3000);
+    // this.siteService.loading.subscribe(data => {
+    //   this.loading = data;
+    // });
   }
 }

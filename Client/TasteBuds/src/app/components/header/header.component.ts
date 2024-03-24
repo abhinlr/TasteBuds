@@ -49,11 +49,6 @@ export class HeaderComponent implements OnInit,OnDestroy{
     this.authListenerSubs.unsubscribe();
   }
 
-  // @HostListener('window:scroll', [])
-  // onWindowScroll() {
-  //   this.isSticky = (document.documentElement.scrollTop || document.body.scrollTop || 0) > 85;
-  // }
-
   openLoginPopup(){
     this.loginPopup = true;
   }
@@ -75,20 +70,11 @@ export class HeaderComponent implements OnInit,OnDestroy{
     if(locationObj){
       locationObj = JSON.parse(locationObj);
       this.locationData = {place:locationObj.features[0].properties.county,state:locationObj.features[0].properties.state_code};
-      this.latAndLong = {lat:locationObj.query.lat,lng:locationObj.query.lon};
     }else {
       this.restaurantService.getLocationService()
         .then(resp=>{
           this.locationData = {place:resp.features[0].properties.county,state:resp.features[0].properties.state_code};
-          this.latAndLong = {lat:resp.query.lat,lng:resp.query.lon};
-          console.log(this.locationData);
         })
     }
-    // if(this.locationData){
-    //   this.restaurantService.getAllRestaurants(this.latAndLong)
-    //     .then(response=>{
-    //       console.log(response);
-    //     });
-    // }
   }
 }

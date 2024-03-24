@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-const geoapifykey = 'c5163cad70594a68ac76bc1ab76dc8e7';
 require('dotenv').config();
 require('../../../Client/TasteBuds/.env');
 
@@ -29,7 +28,10 @@ exports.getRestaurants = async (data) => {
     try {
         const lng = data.lng;
         const lat = data.lat;
-        return fetch(`https://instafood.onrender.com/api/restaurants?lat=${lat}&lng=${lng}`)
+        const url = 'https://foodfire.onrender.com/api/restaurants?lat=12.9716&lng=77.5946&page_type=DESKTOP_WEB_LISTING';
+        // const url = 'https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.251137&lng=75.126805';
+        // const url = `https://instafood.onrender.com/api/restaurants?lat=12.9716&lng=77.5946`;
+        return fetch(url)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -45,4 +47,22 @@ exports.getRestaurants = async (data) => {
         throw error;
     }
 
+};
+
+exports.getRestaurantMenu = async (data) => {
+    try {
+        const restaurantId = data.restaurantId;
+        const url = `https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=12.9716&lng=77.5946&&submitAction=ENTER&restaurantId=${restaurantId}`
+        // const url = `https://instafood.onrender.com/api/menu?lat=12.251137&lng=75.126805&menuId=${restaurantId}`;
+        // const url = `https://www.swiggy.com/api/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.251137&lng=75.126805&submitAction=ENTER&restaurantId=${restaurantId}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const jsonData = await response.json(); // Parse the JSON response
+        return jsonData;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        throw error;
+    }
 };

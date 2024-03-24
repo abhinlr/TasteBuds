@@ -117,7 +117,7 @@ body {
     margin-bottom: 75px;
     font-size: 56px;
     font-weight: 400;
-    color: #fff;
+    color: transparent;
   }
 }
 
@@ -125,7 +125,7 @@ body {
   display: inline-block;
   padding: toem(10px) toem(30px);
   margin: 0 10px;
-  background-color: #fff;
+  background-color: transparent;
   border-radius: toem(25px);
   box-sizing: border-box;
 }
@@ -135,9 +135,5 @@ body {
 
   &--small {
     font-size: 50%
-  }
-
-  &--big {
-    font-size: 150%;
   }
 }

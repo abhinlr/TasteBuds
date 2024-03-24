@@ -16,6 +16,7 @@ export class RestaurantService {
     return new Promise<any>((resolve,reject)=>{
       navigator.geolocation.getCurrentPosition(resp=>{
         this.latAndLng = {lng:resp.coords.longitude,lat:resp.coords.latitude};
+        localStorage.setItem('latAndLng', JSON.stringify(this.latAndLng));
         this.http.post<any>(apiConfig.getLocation, this.latAndLng)
           .subscribe((response)=>{
             if(response.success && response.data){
@@ -34,7 +35,22 @@ export class RestaurantService {
       this.http.post<any>(apiConfig.getAllRestaurants, data)
         .subscribe((response)=>{
           if(response.success &&response.data){
-            console.log(response.data);
+            resolve(response);
+          }else{
+            reject(response);
+          }
+        })
+    })
+  }
+
+  getRestaurantMenu(data:any):Promise<any>{
+    return new Promise<any>((resolve, reject)=>{
+      this.http.post<any>(apiConfig.getRestaurantMenu, data)
+        .subscribe((response)=>{
+          if(response.success &&response.data){
+            resolve(response);
+          }else{
+            reject(response);
           }
         })
     })

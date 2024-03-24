@@ -22,4 +22,14 @@ router.post('/getRestaurants', function (req,res){
         })
 })
 
+router.post('/getRestaurantMenu', function (req,res){
+    restaurantController.getRestaurantMenu(req.body)
+        .then(data=>{
+            res.status(201).send({success:true,data:data});
+        })
+        .catch(err=>{
+            res.send({ success: false, error: err });
+        })
+})
+
 module.exports = router;

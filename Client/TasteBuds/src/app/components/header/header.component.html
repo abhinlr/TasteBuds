@@ -11,6 +11,11 @@
           <span *ngIf="!locationData"><i class="fa-solid fa-location-dot" (click)="getLocation()"></i></span>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 account">
+            <li class="nav-item" *ngIf="userIsAuthenticated">
+              <a class="nav-link" routerLink='/cart'>Cart</a>
+            </li>
+          </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search">
             <button class="btn search"><i class="fa-solid fa-magnifying-glass"></i></button>

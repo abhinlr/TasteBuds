@@ -4,5 +4,6 @@ export const apiConfig = {
   sendEmail:'api/sendEmailOtp',
   verifyEmail:'api/verifyOtp',
   getLocation:'api/getLocationInfo',
-  getAllRestaurants:'api/getRestaurants'
+  getAllRestaurants:'api/getRestaurants',
+  getRestaurantMenu:'api/getRestaurantMenu'
 };

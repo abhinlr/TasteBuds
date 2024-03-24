@@ -19,6 +19,8 @@ import {AuthInterceptor} from "./interceptor/auth-interceptor";
 import { TbRatingComponent } from './common/tb-rating/tb-rating.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
+import { RestaurantComponent } from './components/restaurant/restaurant.component';
+import { RestaurantDetailsComponent } from './components/restaurant-details/restaurant-details.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { FavouritesComponent } from './components/favourites/favourites.componen
     TbRatingComponent,
     OrdersComponent,
     FavouritesComponent,
+    RestaurantComponent,
+    RestaurantDetailsComponent,
   ],
   imports: [
     BrowserModule,
