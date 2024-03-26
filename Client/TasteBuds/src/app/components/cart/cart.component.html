@@ -1,46 +1,82 @@
 <section id="cart">
   <div class="cart">
     <div class="container">
-      <div class="row">
-        <div class="header">
-          <h4>Cart</h4>
-        </div>
-      </div>
       <div class="row cart-table mt-5">
         <div class="col-md-8">
-          <table class="table-responsive table-striped table-hover custom-table" style="width: 100%; background-color: #eee2dc;">
+          <div class="header">
+            <h4>Cart</h4>
+          </div>
+          <table class="table-responsive table-striped table-hover custom-table">
+            <thead>
+            <tr>
+              <th></th>
+              <th><p>Product</p></th>
+              <th><p>Price</p></th>
+              <th><p>Quantity</p></th>
+              <th><p>Sub Total</p></th>
+              <th><p>Delete</p></th>
+            </tr>
+            </thead>
             <tbody>
             <tr *ngFor="let item of cartItems">
-              <td><img [src]="'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/'+item.product.imageUrl" alt="Product Image" class="img-thumbnail"></td>
-              <td>
-                <h5>{{item.product.name}}</h5>
-                <span>{{item.product.price}}</span>
+              <td><img
+                [src]="'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/'+item.product.imageUrl"
+                alt="Product Image" class="img-thumbnail"></td>
+              <td class="product-name">
+                <h6>{{ item.product.name }}</h6>
               </td>
+              <td><span>&#8377;{{ item.product.price }}</span></td>
               <td>
                 <div class="input-group">
-                  <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary" type="button" (click)="decrementQuantity(item)">-</button>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" (click)="decrementQuantity(item)"><i
+                      class="fa-solid fa-minus"></i></button>
                   </div>
                   <input type="text" class="form-control text-center" value="{{item.quantity}}" readonly>
                   <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" (click)="incrementQuantity(item)">+</button>
+                    <button class="btn btn-outline-secondary" type="button" (click)="incrementQuantity(item)"><i
+                      class="fa-solid fa-plus"></i></button>
                   </div>
                 </div>
               </td>
+              <td>&#8377;{{item.product.price * item.quantity}}</td>
               <td>
-                <button class="btn btn-danger" (click)="deleteItem(item)">Delete</button>
+                <button class="btn btn-danger" (click)="deleteItem(item._id)"><i class="fa-solid fa-trash"></i></button>
               </td>
             </tr>
 
-            <!-- Add more rows for additional products in the cart -->
             </tbody>
           </table>
         </div>
 
         <div class="col-md-4">
+            <div class="card shadow-0 border">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="mb-2">Total price:</p>
+                  <p class="mb-2">&#8377;{{cartTotal}}</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="mb-2">Discount:</p>
+                  <p class="mb-2 text-success">00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="mb-2">GST:</p>
+                  <p class="mb-2">00</p>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <p class="mb-2">Total price:</p>
+                  <p class="mb-2 fw-bold">&#8377;{{cartTotal}}</p>
+                </div>
 
+                <div class="mt-3">
+                  <button type="submit" class="order btn btn-success w-100 shadow-0 mb-2">Place Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
   </div>
 </section>

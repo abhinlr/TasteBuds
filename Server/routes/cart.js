@@ -22,5 +22,27 @@ router.get('/getCart', function (req, res) {
         });
 });
 
+router.post('/deleteItem', function (req, res) {
+    cartController.deleteCartItem(req.body.id)
+        .then(data => {
+            res.status(200).json({ success: true, data: data });
+        })
+        .catch(err => {
+            res.status(500).json({ success: false, error: err.message });
+        });
+});
+
+router.post('/updateQuantity', function (req, res) {
+    let id = req.body.id;
+    let qty = req.body.qty;
+    cartController.updateItemQty(id,qty)
+        .then(data => {
+            res.status(200).json({ success: true, data: data });
+        })
+        .catch(err => {
+            res.status(500).json({ success: false, error: err.message });
+        });
+});
+
 
 module.exports = router;

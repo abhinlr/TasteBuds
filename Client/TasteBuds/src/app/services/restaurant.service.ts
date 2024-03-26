@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {apiConfig} from "../api-config";
 import {response} from "express";
@@ -8,21 +8,22 @@ import {response} from "express";
 })
 export class RestaurantService {
 
-  latAndLng :{lat:number,lng:number}={lat:0,lng:0};
+  latAndLng: { lat: number, lng: number } = {lat: 0, lng: 0};
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
-  getLocationService():Promise<any>{
-    return new Promise<any>((resolve,reject)=>{
-      navigator.geolocation.getCurrentPosition(resp=>{
-        this.latAndLng = {lng:resp.coords.longitude,lat:resp.coords.latitude};
+  getLocationService(): Promise<any> {
+    return new Promise<any>((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(resp => {
+        this.latAndLng = {lng: resp.coords.longitude, lat: resp.coords.latitude};
         localStorage.setItem('latAndLng', JSON.stringify(this.latAndLng));
         this.http.post<any>(apiConfig.getLocation, this.latAndLng)
-          .subscribe((response)=>{
-            if(response.success && response.data){
+          .subscribe((response) => {
+            if (response.success && response.data) {
               localStorage.setItem('location', JSON.stringify(response.data));
               resolve(response.data);
-            }else{
+            } else {
               reject('Unable to fetch location');
             }
           })
@@ -30,60 +31,85 @@ export class RestaurantService {
     })
   }
 
-  getAllRestaurants(data:any):Promise<any>{
-    return new Promise<any>((resolve, reject)=>{
+  getAllRestaurants(data: any): Promise<any> {
+    return new Promise<any>((resolve, reject) => {
       this.http.post<any>(apiConfig.getAllRestaurants, data)
-        .subscribe((response)=>{
-          if(response.success &&response.data){
+        .subscribe((response) => {
+          if (response.success && response.data) {
             resolve(response);
-          }else{
+          } else {
             reject(response);
           }
         })
     })
   }
 
-  getRestaurantMenu(data:any):Promise<any>{
-    return new Promise<any>((resolve, reject)=>{
+  getRestaurantMenu(data: any): Promise<any> {
+    return new Promise<any>((resolve, reject) => {
       this.http.post<any>(apiConfig.getRestaurantMenu, data)
-        .subscribe((response)=>{
-          if(response.success &&response.data){
+        .subscribe((response) => {
+          if (response.success && response.data) {
             resolve(response);
-          }else{
+          } else {
             reject(response);
           }
         })
     })
   }
 
-  addItemTocart(data:any):Promise<any>{
+  addItemTocart(data: any): Promise<any> {
     console.log('data', data);
-    return new Promise<any>((resolve, reject)=>{
+    return new Promise<any>((resolve, reject) => {
       this.http.post<any>(apiConfig.addToCart, data)
-        .subscribe((response)=>{
-          if(response.success &&response.data){
+        .subscribe((response) => {
+          if (response.success && response.data) {
             resolve(response);
-          }else{
+          } else {
             reject(response);
           }
         })
     })
   }
 
-  fetchCart():Promise<any>{
-    return new Promise<any>((resolve, reject)=>{
+  fetchCart(): Promise<any> {
+    return new Promise<any>((resolve, reject) => {
       this.http.get<any>(apiConfig.fetchCart)
-        .subscribe((response)=>{
-          if(response.success &&response.data){
+        .subscribe((response) => {
+          if (response.success && response.data) {
             resolve(response);
-          }else{
+          } else {
             reject(response);
           }
-        })
-    })
+        });
+    });
   }
 
+  deleteItemFromCart(id:string): Promise<any> {
+    console.log(id);
+    return new Promise<any>((resolve, reject) => {
+      this.http.post<any>(apiConfig.deleteCartItem, {id:id})
+      .subscribe((response) => {
+        if (response.success && response.data) {
+          resolve(response);
+        } else {
+          reject(response);
+        }
+      });
+  });
+}
 
+  updateItemQty(id:string,qty:number): Promise<any> {
+    return new Promise<any>((resolve, reject) => {
+      this.http.post<any>(apiConfig.updateItemQty, {id:id,qty:qty})
+        .subscribe((response) => {
+          if (response.success && response.data) {
+            resolve(response);
+          } else {
+            reject(response);
+          }
+        });
+    });
+  }
 
 
 }

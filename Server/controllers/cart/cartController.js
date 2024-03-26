@@ -56,3 +56,49 @@ exports.getCart = async (user) => {
     }
 
 };
+
+exports.deleteCartItem = async (itemId) => {
+    try {
+        let cart = await Cart.findOne().populate('items.product').exec();
+        if (!cart) {
+            throw { message: 'Unable to find cart.' };
+        }
+        console.log(itemId);
+        const indexToDelete = cart.items.findIndex(item => item._id.toString() === itemId);
+        if (indexToDelete === -1) {
+            throw { message: 'Item not found in cart.' };
+        }
+
+        cart.items.splice(indexToDelete, 1);
+        await cart.save();
+
+        return { cart: cart };
+    } catch (error) {
+        throw error;
+    }
+};
+
+
+exports.updateItemQty = async (itemId,qty) => {
+    try {
+        let cart = await Cart.findOne().populate('items.product').exec();
+        if (!cart) {
+            throw { message: 'Unable to find cart.' };
+        }
+        const item = cart.items.find(item => item._id.toString() === itemId);
+        if (!item) {
+            throw { message: 'Item not found in cart.' };
+        }
+
+        item.quantity = qty;
+        await cart.save();
+
+
+        return { cart:cart };
+
+    }catch(error){
+        throw error;
+    }
+
+};
+

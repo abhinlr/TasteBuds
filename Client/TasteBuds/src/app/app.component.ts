@@ -18,15 +18,17 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     this.loading = true;
     this.siteService.loading.subscribe(data => {
-      this.loading = data;
+      setTimeout(() => {
+        this.loading = data;
+      });
     });
     this.siteService.loading.next(true);
     this.authService.authUser();
-    setTimeout(()=>{
-      this.loading = false;
-    },4000);
+    this.loading = false;
     this.siteService.loading.subscribe(data => {
-      this.loading = data;
+      setTimeout(() => {
+        this.loading = data;
+      });
     });
   }
 }

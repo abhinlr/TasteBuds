@@ -6,27 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a92471a8-0f8c-44fe-80e6-02de15ee1911" name="Changes" comment="restaurant and menu">
       <change afterPath="$PROJECT_DIR$/Client/TasteBuds/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/controllers/cart/cartController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/models/Product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/passport-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/routes/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/interceptor/auth-interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/interceptor/auth-interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/restaurant.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/restaurant.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/controllers/auth/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/controllers/auth/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/controllers/restaurant/restaurantController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/controllers/restaurant/restaurantController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/controllers/cart/cartController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/controllers/cart/cartController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/routes/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/cart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +163,13 @@
       <workItem from="1711184597598" duration="29599000" />
       <workItem from="1711252312465" duration="4223000" />
       <workItem from="1711256668772" duration="23221000" />
-      <workItem from="1711284525312" duration="4574000" />
+      <workItem from="1711284525312" duration="5701000" />
+      <workItem from="1711340263513" duration="6000" />
+      <workItem from="1711353461670" duration="18000" />
+      <workItem from="1711353509918" duration="298000" />
+      <workItem from="1711370670452" duration="8376000" />
+      <workItem from="1711424118148" duration="116000" />
+      <workItem from="1711424694058" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -256,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711254153780</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="restaurant and menu">
+      <option name="closed" value="true" />
+      <created>1711294480191</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711294480191</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

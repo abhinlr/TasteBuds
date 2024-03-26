@@ -2,20 +2,25 @@
   text-transform: uppercase;
 }
 
+.header{
+  margin-left: 20px;
+}
+
 .container {
   padding: 10px 40px 10px 100px;
   min-height: 500px;
 }
 
 td img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50px;
 }
 
-td {
+td ,th{
   text-align: center !important;
   vertical-align: middle;
+  padding: 10px 10px;
 }
 
 td input{
@@ -25,8 +30,28 @@ td input{
 }
 
 .custom-table {
-  background-color: #eee2dc;
+  background-color: #FAF9F6;
   margin-bottom: 1rem;
   vertical-align: top;
   border-color: var(--bs-table-border-color);
+  width: 100%;
+}
+
+.btn-outline-secondary{
+  border-radius: 20px;
+  transform: scale(0.7);
+}
+
+.product-name{
+  width: 30%;
+}
+
+.col-md-8{
+  padding: 30px;
+  border: 1px solid gray;
+}
+
+.order{
+  background-color:#E84242;
+  border: 1px solid white;
 }

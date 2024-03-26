@@ -9,5 +9,7 @@ export const apiConfig = {
   addToCart:'api/addToCart',
   fetchCart:'api/getCart',
   profile:'api/profile',
-  logout:'api/logout'
+  logout:'api/logout',
+  deleteCartItem:'api/deleteItem',
+  updateItemQty:'api/updateQuantity'
 };
