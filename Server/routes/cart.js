@@ -3,7 +3,7 @@ const router = express.Router();
 const cartController = require('../controllers/cart/cartController');
 
 router.post('/addToCart', function (req, res) {
-    cartController.addToCart(req.body,req.session.user)
+    cartController.addToCart(req.body,req.user)
         .then(data => {
             res.status(201).json({ success: true, data: data });
         })
@@ -13,7 +13,7 @@ router.post('/addToCart', function (req, res) {
 });
 
 router.get('/getCart', function (req, res) {
-    cartController.getCart(req.session.user)
+    cartController.getCart(req.user._id)
         .then(data => {
             res.status(200).json({ success: true, data: data });
         })

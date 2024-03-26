@@ -1,14 +1,13 @@
-import {Injectable} from '@angular/core';
+import {OnInit,Injectable, OnDestroy} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {apiConfig} from "../api-config";
 import {BehaviorSubject, map, Subject} from "rxjs";
-import {response} from "express";
 import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthService implements OnInit, OnDestroy{
 
   private userObject = new BehaviorSubject<any>(null);
   private authStatusListener = new Subject<boolean>();
@@ -18,12 +17,16 @@ export class AuthService {
               private router: Router) {
   }
 
-  setUserObject(user: any) {
-    this.userObject.next(user);
+  ngOnInit() {
+    this.authUser();
   }
 
-  getUserObject() {
-    return this.userObject.asObservable();
+  setUserObject(user: any) {
+    return this.userObject.next(user);
+  }
+
+  getUserObject():BehaviorSubject<any> {
+    return this.userObject.value;
   }
 
   getAuthStatusListener() {
@@ -59,15 +62,21 @@ export class AuthService {
   }
 
   login(loginData: any) {
-    this.http.post<any>(apiConfig.login, {email: loginData.email, password: loginData.password})
+    this.http.post<any>(apiConfig.login, { email: loginData.email, password: loginData.password })
+      .pipe(
+        map(response => {
+          delete response.user.password;
+          return response;
+        })
+      )
       .subscribe(response => {
-        if (response.success && response.user) {
+        if (response.success) {
           this.authStatusListener.next(true);
           this.isAuthenticated = true;
           this.setUserObject(response.user);
           this.router.navigate(['/']);
         }
-      })
+      });
   }
 
   logout() {
@@ -82,6 +91,17 @@ export class AuthService {
   }
 
   private fetchAuthData() {
-    return this.http.get<any>(apiConfig.profile);
+    return this.http.get<any>(`${apiConfig.profile}?timestamp=${Date.now()}`).pipe(
+      map(response => {
+        if (response.success) {
+          delete response.user.password;
+        }
+        return response; // Return the modified response
+      })
+    );
+  }
+
+
+  ngOnDestroy() {
   }
 }

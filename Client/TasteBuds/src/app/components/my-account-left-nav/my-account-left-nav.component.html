@@ -1,0 +1,50 @@
+<section style="background-color: #eee;">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-lg-0 mb-4">
+          <div class="card-body p-0">
+            <ul class="list-group list-group-flush rounded-3">
+              <li class="list-group-item d-flex justify-content-center align-items-center p-3 text-center" (click)="changeTab('order')">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <p class="mb-0">Orders</p>
+              </li>
+              <li class="list-group-item d-flex justify-content-center align-items-center p-3" (click)="changeTab('favourites')">
+                <i class="fa-solid fa-star"></i>
+                <p class="mb-0">Favourites</p>
+              </li>
+              <li class="list-group-item d-flex justify-content-center align-items-center p-3" (click)="changeTab('addresses')">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="mb-0">Address</p>
+              </li>
+              <li class="list-group-item d-flex justify-content-center align-items-center p-3" (click)="changeTab('preferences')">
+                <i class="fa-solid fa-gear"></i>
+                <p class="mb-0">Account Settings</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="card mb-4 mt-5">
+          <div class="card-body text-center">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                 class="rounded-circle img-fluid" style="width: 150px;">
+            <h5 class="my-3">{{userObject.username}}</h5>
+            <p class="text-muted mb-1">{{userObject.email}}</p>
+            <div class="d-flex justify-content-center mb-2">
+              <button type="button" class="btn btn-primary mx-2" (click)="changeTab('profile')">Edit Profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <app-my-account *ngIf="leftNav['profile']"></app-my-account>
+        <app-orders *ngIf="leftNav['orders']"></app-orders>
+        <app-favourites *ngIf="leftNav['favourites']"></app-favourites>
+        <app-addresses *ngIf="leftNav['addresses']"></app-addresses>
+        <app-preferences *ngIf="leftNav['preferences']"></app-preferences>
+      </div>
+    </div>
+  </div>
+</section>

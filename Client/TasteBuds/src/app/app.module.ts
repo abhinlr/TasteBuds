@@ -17,10 +17,13 @@ import { CategoryComponent } from './components/category/category.component';
 import {NgOptimizedImage} from "@angular/common";
 import {AuthInterceptor} from "./interceptor/auth-interceptor";
 import { TbRatingComponent } from './common/tb-rating/tb-rating.component';
-import { OrdersComponent } from './components/orders/orders.component';
+import { OrdersComponent } from './components/my-account/orders/orders.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
 import { RestaurantDetailsComponent } from './components/restaurant-details/restaurant-details.component';
+import { MyAccountLeftNavComponent } from './components/my-account-left-nav/my-account-left-nav.component';
+import { AddressesComponent } from './components/my-account/addresses/addresses.component';
+import { PreferencesComponent } from './components/my-account/preferences/preferences.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { RestaurantDetailsComponent } from './components/restaurant-details/rest
     FavouritesComponent,
     RestaurantComponent,
     RestaurantDetailsComponent,
+    MyAccountLeftNavComponent,
+    AddressesComponent,
+    PreferencesComponent,
   ],
   imports: [
     BrowserModule,

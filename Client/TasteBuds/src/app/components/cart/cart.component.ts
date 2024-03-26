@@ -21,9 +21,11 @@ export class CartComponent implements OnInit{
   }
 
   fetchCart(){
+    this.siteService.loading.next(true);
     this.restaurantService.fetchCart()
       .then((response)=>{
         if(response.success && response.data){
+          this.siteService.loading.next(false);
           this.cartItems = response.data.items;
           this.calculateTotal();
         }

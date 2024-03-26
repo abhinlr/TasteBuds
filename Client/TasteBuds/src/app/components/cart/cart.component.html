@@ -16,35 +16,43 @@
               <th><p>Sub Total</p></th>
               <th><p>Delete</p></th>
             </tr>
+              <tr>
+                <td colspan="6"><hr></td>
+              </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let item of cartItems">
-              <td><img
-                [src]="'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/'+item.product.imageUrl"
-                alt="Product Image" class="img-thumbnail"></td>
-              <td class="product-name">
-                <h6>{{ item.product.name }}</h6>
-              </td>
-              <td><span>&#8377;{{ item.product.price }}</span></td>
-              <td>
-                <div class="input-group">
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" (click)="decrementQuantity(item)"><i
-                      class="fa-solid fa-minus"></i></button>
+            <ng-container *ngFor="let item of cartItems; let i = index">
+              <tr>
+                <td><img [src]="'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/'+item.product.imageUrl" alt="Product Image" class="img-thumbnail"></td>
+                <td class="product-name">
+                  <h6>{{ item.product.name }}</h6>
+                </td>
+                <td><span>&#8377;{{ item.product.price }}</span></td>
+                <td>
+                  <div class="input-group">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" (click)="decrementQuantity(item)"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                    <input type="text" class="form-control text-center" value="{{item.quantity}}" readonly>
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" (click)="incrementQuantity(item)"><i class="fa-solid fa-plus"></i></button>
+                    </div>
                   </div>
-                  <input type="text" class="form-control text-center" value="{{item.quantity}}" readonly>
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" (click)="incrementQuantity(item)"><i
-                      class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </td>
-              <td>&#8377;{{item.product.price * item.quantity}}</td>
-              <td>
-                <button class="btn btn-danger" (click)="deleteItem(item._id)"><i class="fa-solid fa-trash"></i></button>
-              </td>
-            </tr>
-
+                </td>
+                <td>&#8377;{{item.product.price * item.quantity}}</td>
+                <td>
+                  <button class="btn btn-danger" (click)="deleteItem(item._id)"><i class="fa-solid fa-trash"></i></button>
+                </td>
+              </tr>
+              <!-- Add <hr> after each row except for the last one -->
+              <ng-container>
+                <tr>
+                  <td></td>
+                  <td colspan="4" *ngIf="i !== cartItems.length - 1"><hr></td>
+                  <td></td>
+                </tr>
+              </ng-container>
+            </ng-container>
             </tbody>
           </table>
         </div>

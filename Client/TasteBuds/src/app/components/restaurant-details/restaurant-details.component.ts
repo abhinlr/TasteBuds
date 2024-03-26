@@ -29,11 +29,14 @@ export class RestaurantDetailsComponent implements OnInit{
     let data = {restaurantId:restaurantId};
     this.restaurantService.getRestaurantMenu(data)
       .then(response=>{
-        this.restaurantDetails = response.data.data.cards[0].card.card.info;
-        this.recommendedItems = response.data.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards;
-        if(this.recommendedItems === undefined){
-          this.recommendedItems = response.data.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards;
-        }
+        this.restaurantDetails = response.data.data.cards[0]?.card?.card.info;
+        const recommendedCards = [
+          response.data.data.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards,
+          response.data.data.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards,
+          response.data.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards
+        ];
+        this.recommendedItems = recommendedCards.find(cards => !!cards);
+
         console.log(this.recommendedItems);
         this.siteService.loading.next(false);
       })

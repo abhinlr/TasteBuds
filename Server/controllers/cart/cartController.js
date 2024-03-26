@@ -21,9 +21,10 @@ exports.addToCart = async (data,user) => {
             await product.save();
             existingProduct = product;
         }
-        let cart = await Cart.findOne({user: user._id});
+        user = user._id.toString();
+        let cart = await Cart.findOne({user: user});
         if (!cart) {
-            cart = new Cart({ user: user._id, items: [] });
+            cart = new Cart({ user: user, items: [] });
         }
         const existingItem = cart.items.find(item => item.product.toString() === existingProduct._id);
         if(existingItem) {
@@ -44,8 +45,9 @@ exports.addToCart = async (data,user) => {
 };
 
 exports.getCart = async (user) => {
+    user = user.toString();
     try{
-        let cart = await Cart.findOne({user: user._id}).populate('items.product').exec();
+        let cart = await Cart.findOne({user: user}).populate('items.product').exec();
         if(!cart){
             throw error;
         }

@@ -12,13 +12,16 @@ const app = express();
 const db = process.env.DB;
 const passport = require('passport')
 const methodOverride = require('method-override');
-const mongoDBStore = require('connect-mongo');
+const mongoDBSession = require('connect-mongodb-session')(session);
 
 const initializePassport = require('./passport-config')
 initializePassport(passport);
 
 mongoose.connect(db).then(() => console.log('Database connection successful')).catch(err => console.error('MongoDB connection error:', err));
-
+const mongoDBStore = new mongoDBSession({
+    uri:db,
+    collection:'sessions'
+})
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -32,9 +35,7 @@ app.use(session({
     cookie: {
         maxAge: 86400000
     },
-    store: mongoDBStore.create({
-        client:mongoose.connection.getClient()
-    })
+    store: mongoDBStore
 }));
 
 app.use(passport.initialize());

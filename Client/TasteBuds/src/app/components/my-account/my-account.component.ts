@@ -13,7 +13,9 @@ export class MyAccountComponent implements OnInit{
 
   ngOnInit() {
     this.userObject =this.authService.getUserObject();
-    this.userObject = this.userObject.source._value._value
-    console.log('this.userObject', this.userObject);
+  }
+
+  logout(){
+    this.authService.logout();
   }
 }

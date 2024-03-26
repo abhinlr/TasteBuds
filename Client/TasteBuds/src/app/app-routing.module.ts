@@ -8,12 +8,13 @@ import {AuthGuard} from "./guards/auth-guard";
 import {HomeComponent} from "./components/home/home.component";
 import {CartComponent} from "./components/cart/cart.component";
 import {RestaurantDetailsComponent} from "./components/restaurant-details/restaurant-details.component";
+import {MyAccountLeftNavComponent} from "./components/my-account-left-nav/my-account-left-nav.component";
 
 const routes: Routes = [
   { path: 'login', component: HomeComponent},
   { path: 'signup', component: HomeComponent},
   { path: 'forgot-password', component: ForgotPasswordComponent},
-  { path : 'my-account', component: MyAccountComponent,canActivate:[AuthGuard]},
+  { path : 'my-account', component: MyAccountLeftNavComponent},
   { path:'cart', component: CartComponent},
   { path: 'restaurant/:id', component: RestaurantDetailsComponent},
   { path: '', component:HomeComponent},

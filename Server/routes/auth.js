@@ -32,27 +32,30 @@ router.post('/signUp', function (req, res) {
         });
 });
 
-router.post('/login', function (req, res) {
-    authController.login(req.body)
-        .then(data => {
-            const userData = data.toObject();
-            delete userData.password;
-            req.session.user = userData;
-            res.status(201).json({ success: true, user: userData });
-        })
-        .catch(err => {
-            res.json({success: false, error: err});
+router.post('/login', function(req, res, next) {
+    passport.authenticate('local', function(err, user, info) {
+        if (err) {
+            return res.status(500).json({ message: 'An error occurred during authentication.' });
+        }
+        if (!user) {
+            return res.status(401).json({ message: info.message });
+        }
+        req.login(user, function(err) {
+            if (err) {
+                return res.status(500).json({ message: 'An error occurred during login.' });
+            }
+            return res.status(200).json({success:true,user:user});
         });
+    })(req, res, next);
 });
 
 router.get('/profile', function (req, res) {
-    authController.fetchProfile(req.session)
-        .then(data => {
-            res.json({ success: true, user: data });
-        })
-        .catch(err => {
-            res.json({ success: false, error: err.message });
-        });
+    if(req.user){
+        res.setHeader('Cache-Control', 'no-cache');
+        res.status(200).json({success:true,user:req.user});
+    }else{
+        res.status(200).json({success:false,user:null});
+    }
 });
 
 router.get('/logout', function (req, res) {
