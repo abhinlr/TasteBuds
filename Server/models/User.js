@@ -30,6 +30,7 @@ const userSchema = new Schema({
     password: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
     role: { type:String, enum: ['Admin', 'User'], default:'User'},
+    phone:{type:Number},
     address: [addressSchema]
 });
 

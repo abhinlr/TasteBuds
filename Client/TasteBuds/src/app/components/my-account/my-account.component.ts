@@ -8,11 +8,11 @@ import {AuthService} from "../../services/auth.service";
 })
 export class MyAccountComponent implements OnInit{
   constructor(private authService:AuthService) {
+    this.authService.getUserObject().subscribe(value => this.userObject = value);
   }
   userObject!:any;
 
   ngOnInit() {
-    this.userObject =this.authService.getUserObject();
   }
 
   logout(){

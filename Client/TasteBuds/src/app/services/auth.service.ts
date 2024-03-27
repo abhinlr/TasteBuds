@@ -1,32 +1,31 @@
-import {OnInit,Injectable, OnDestroy} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {apiConfig} from "../api-config";
-import {BehaviorSubject, map, Subject} from "rxjs";
-import {Router} from "@angular/router";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { apiConfig } from "../api-config";
+import { BehaviorSubject, Observable, Subject } from "rxjs";
+import { map, switchMap, take } from "rxjs/operators";
+import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService implements OnInit, OnDestroy{
+export class AuthService{
 
   private userObject = new BehaviorSubject<any>(null);
   private authStatusListener = new Subject<boolean>();
   private isAuthenticated = false;
 
   constructor(private http: HttpClient,
-              private router: Router) {
+              private router: Router,
+  ) {
   }
 
-  ngOnInit() {
-    this.authUser();
-  }
 
   setUserObject(user: any) {
     return this.userObject.next(user);
   }
 
-  getUserObject():BehaviorSubject<any> {
-    return this.userObject.value;
+  getUserObject():Observable<any> {
+    return this.userObject.asObservable();
   }
 
   getAuthStatusListener() {
@@ -91,7 +90,7 @@ export class AuthService implements OnInit, OnDestroy{
   }
 
   private fetchAuthData() {
-    return this.http.get<any>(`${apiConfig.profile}?timestamp=${Date.now()}`).pipe(
+    return this.http.get<any>(apiConfig.profile).pipe(
       map(response => {
         if (response.success) {
           delete response.user.password;
@@ -101,7 +100,8 @@ export class AuthService implements OnInit, OnDestroy{
     );
   }
 
-
-  ngOnDestroy() {
+  saveAddress(address:{}){
+    return this.http.post<any>(apiConfig.saveAddress,{address:address});
   }
+
 }

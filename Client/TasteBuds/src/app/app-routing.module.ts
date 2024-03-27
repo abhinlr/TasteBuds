@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {LoginComponent} from "./components/login/login.component";
-import {SignupComponent} from "./components/signup/signup.component";
 import {ForgotPasswordComponent} from "./components/forgot-password/forgot-password.component";
-import {MyAccountComponent} from "./components/my-account/my-account.component";
 import {AuthGuard} from "./guards/auth-guard";
 import {HomeComponent} from "./components/home/home.component";
 import {CartComponent} from "./components/cart/cart.component";
@@ -14,9 +11,13 @@ const routes: Routes = [
   { path: 'login', component: HomeComponent},
   { path: 'signup', component: HomeComponent},
   { path: 'forgot-password', component: ForgotPasswordComponent},
-  { path : 'my-account', component: MyAccountLeftNavComponent},
-  { path:'cart', component: CartComponent},
+  { path: 'profile', component: MyAccountLeftNavComponent},
+  { path: 'cart', component: CartComponent},
   { path: 'restaurant/:id', component: RestaurantDetailsComponent},
+  { path: 'orders', component:MyAccountLeftNavComponent},
+  { path: 'favourites', component:MyAccountLeftNavComponent},
+  { path: 'address', component:MyAccountLeftNavComponent},
+  { path: 'preferences', component:MyAccountLeftNavComponent},
   { path: '', component:HomeComponent},
   { path:'**',component:HomeComponent}
   ]

@@ -51,7 +51,6 @@ router.post('/login', function(req, res, next) {
 
 router.get('/profile', function (req, res) {
     if(req.user){
-        res.setHeader('Cache-Control', 'no-cache');
         res.status(200).json({success:true,user:req.user});
     }else{
         res.status(200).json({success:false,user:null});
@@ -66,6 +65,16 @@ router.get('/logout', function (req, res) {
             res.json({ success: true });
         }
     });
+});
+
+router.post('/saveAddress', function (req, res) {
+    authController.saveAddress(req.body.address,req.user)
+        .then(data => {
+            res.status(201).json({success: true, data: data});
+        })
+        .catch(err => {
+            res.json({success: false, error: err});
+        });
 });
 
 

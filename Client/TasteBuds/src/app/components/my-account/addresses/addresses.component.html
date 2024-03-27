@@ -1,1 +1,43 @@
-<p>addresses works!</p>
+<section id="address">
+  <div class="address">
+    <div class="row">
+      <div class="header mb-4">
+        <h5>Address</h5>
+      </div>
+    </div>
+    <div class="row" *ngIf="userAddress">
+      <div *ngFor="let address of userAddress">
+        <p><strong>Street:</strong> {{ address.street }}</p>
+        <p><strong>City:</strong> {{ address.city }}</p>
+        <p><strong>State:</strong> {{ address.state }}</p>
+        <p><strong>Postal Code:</strong> {{ address.postalCode }}</p>
+        <p><strong>Country:</strong> {{ address.country }}</p>
+      </div>
+    </div>
+    <div class="row" *ngIf="!userAddress">
+      <form #addressForm =ngForm (ngSubmit)="saveAddress()">
+        <div class="mb-3">
+          <label for="street" class="form-label">Street</label>
+          <input type="text" class="form-control" id="street" name="street" [(ngModel)]="addressData.street">
+        </div>
+        <div class="mb-3">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" name="city" [(ngModel)]="addressData.city">
+        </div>
+        <div class="mb-3">
+          <label for="state" class="form-label">State</label>
+          <input type="text" class="form-control" id="state" name="state" [(ngModel)]="addressData.state">
+        </div>
+        <div class="mb-3">
+          <label for="postalCode" class="form-label">Postal Code</label>
+          <input type="text" class="form-control" id="postalCode" name="postalCode" [(ngModel)]="addressData.postalCode">
+        </div>
+        <div class="mb-3">
+          <label for="country" class="form-label">Country</label>
+          <input type="text" class="form-control" id="country" name="country" [(ngModel)]="addressData.country">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -4,51 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a92471a8-0f8c-44fe-80e6-02de15ee1911" name="Changes" comment="restaurant and menu">
+    <list default="true" id="a92471a8-0f8c-44fe-80e6-02de15ee1911" name="Changes" comment="my account">
       <change afterPath="$PROJECT_DIR$/Client/TasteBuds/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account-left-nav/my-account-left-nav.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account-left-nav/my-account-left-nav.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account-left-nav/my-account-left-nav.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/addresses/addresses.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/addresses/addresses.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/addresses/addresses.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/addresses/addresses.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/favourites/favourites.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/favourites/favourites.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/favourites/favourites.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/favourites/favourites.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/orders/orders.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/preferences/preferences.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/preferences/preferences.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/preferences/preferences.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/preferences/preferences.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/models/Order.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/orders/order-details/order-details.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/orders/order-details/order-details.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/orders/order-details/order-details.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/orders/order-details/order-details.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/api-config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/cart/cart.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account-left-nav/my-account-left-nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account-left-nav/my-account-left-nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account-left-nav/my-account-left-nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account-left-nav/my-account-left-nav.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/addresses/addresses.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/addresses/addresses.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/addresses/addresses.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/addresses/addresses.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/addresses/addresses.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/addresses/addresses.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/my-account.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/my-account.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/my-account.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/my-account.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/my-account.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/my-account.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/orders/orders.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/orders/orders.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/orders/orders.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account-left-nav/my-account-left-nav.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/orders/orders.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/orders/orders.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/orders/orders.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/my-account/orders/orders.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/restaurant-details/restaurant-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/components/restaurant-details/restaurant-details.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TasteBuds/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/controllers/auth/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/controllers/auth/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/controllers/cart/cartController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/controllers/cart/cartController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/passport-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/passport-config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/routes/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/cart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +169,7 @@
       <workItem from="1711424118148" duration="116000" />
       <workItem from="1711424694058" duration="3000" />
       <workItem from="1711458251834" duration="9909000" />
-      <workItem from="1711470343428" duration="5904000" />
+      <workItem from="1711470343428" duration="11833000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -290,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711458312242</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="my account">
+      <option name="closed" value="true" />
+      <created>1711478182840</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711478182840</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +303,7 @@
     <MESSAGE value="banner on home screen" />
     <MESSAGE value="bsdgaskhfsdjlhf" />
     <MESSAGE value="restaurant and menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="restaurant and menu" />
+    <MESSAGE value="my account" />
+    <option name="LAST_COMMIT_MESSAGE" value="my account" />
   </component>
 </project>

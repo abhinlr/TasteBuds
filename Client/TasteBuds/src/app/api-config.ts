@@ -11,5 +11,6 @@ export const apiConfig = {
   profile:'api/profile',
   logout:'api/logout',
   deleteCartItem:'api/deleteItem',
-  updateItemQty:'api/updateQuantity'
+  updateItemQty:'api/updateQuantity',
+  saveAddress:'/api/saveAddress'
 };

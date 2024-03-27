@@ -132,3 +132,23 @@ exports.verifyEmail = async (userData) => {
     }
 };
 
+exports.saveAddress = async (address,user) => {
+    const userId = user._id.toString();
+    console.log('userId', userId);
+    try {
+        const user = await User.findOne({_id: userId});
+        if (!user) {
+            throw {message: 'User not found'};
+        }
+        user.address.push(address);
+        await user.save();
+
+        return {address:user.address};
+    } catch (error) {
+        console.error('Error saving address', error);
+        throw error;
+    }
+};
+
+
+
