@@ -6,6 +6,7 @@ import {HomeComponent} from "./components/home/home.component";
 import {CartComponent} from "./components/cart/cart.component";
 import {RestaurantDetailsComponent} from "./components/restaurant-details/restaurant-details.component";
 import {MyAccountLeftNavComponent} from "./components/my-account-left-nav/my-account-left-nav.component";
+import {CheckoutComponent} from "./components/checkout/checkout.component";
 
 const routes: Routes = [
   { path: 'login', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'favourites', component:MyAccountLeftNavComponent},
   { path: 'address', component:MyAccountLeftNavComponent},
   { path: 'preferences', component:MyAccountLeftNavComponent},
+  { path: 'checkout', component:CheckoutComponent},
   { path: '', component:HomeComponent},
   { path:'**',component:HomeComponent}
   ]

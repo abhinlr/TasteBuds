@@ -25,6 +25,8 @@ import { AddressesComponent } from './components/my-account/addresses/addresses.
 import { PreferencesComponent } from './components/my-account/preferences/preferences.component';
 import { OrdersComponent} from "./components/my-account/orders/orders.component";
 import { OrderDetailsComponent } from './components/my-account/orders/order-details/order-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { OrderDetailsComponent } from './components/my-account/orders/order-deta
     AddressesComponent,
     PreferencesComponent,
     OrderDetailsComponent,
+    CheckoutComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,

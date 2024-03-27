@@ -4,12 +4,13 @@
   "description": "",
   "main": "admin.js",
   "scripts": {
-    "start" : "node admin.js"
+    "start": "node admin.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@stripe/stripe-js": "^3.1.0",
     "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
@@ -31,6 +32,7 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "rxjs": "~7.8.0",
+    "stripe": "^14.22.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },

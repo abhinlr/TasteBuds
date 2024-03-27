@@ -5,7 +5,7 @@
         <h5>Address</h5>
       </div>
     </div>
-    <div class="row" *ngIf="userAddress">
+    <div class="row" *ngIf="userAddress?.length>0">
       <div *ngFor="let address of userAddress">
         <p><strong>Street:</strong> {{ address.street }}</p>
         <p><strong>City:</strong> {{ address.city }}</p>
@@ -14,8 +14,12 @@
         <p><strong>Country:</strong> {{ address.country }}</p>
       </div>
     </div>
-    <div class="row" *ngIf="!userAddress">
+    <div class="row" *ngIf="userAddress?.length ===0">
       <form #addressForm =ngForm (ngSubmit)="saveAddress()">
+        <div class="mb-3">
+          <label for="address1" class="form-label">Address Line 1</label>
+          <input type="text" class="form-control" id="address1" name="address1" [(ngModel)]="addressData.firstLine">
+        </div>
         <div class="mb-3">
           <label for="street" class="form-label">Street</label>
           <input type="text" class="form-control" id="street" name="street" [(ngModel)]="addressData.street">

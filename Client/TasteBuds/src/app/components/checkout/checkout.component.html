@@ -1,0 +1,90 @@
+<section id="checkout">
+  <div class="checkout">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="header">
+            <h2>Checkout</h2>
+          </div>
+          <div class="shipping-details mt-5">
+            <h4 class="mb-4">Delivery Details</h4>
+            <div class="row mb-5">
+              <div class="col-md-4 d-flex align-items-center justify-content-center text-center">
+                <h6 class="m-0">Use Default Address:</h6>
+              </div>
+              <div class="col-md-6">
+                <select class="form-select" (click)="setShippingAddress()">
+                  <option selected>{{defaultAddress?.firstLine}},{{defaultAddress?.street}}</option>
+                </select>
+              </div>
+            </div>
+
+
+            <form class="row g-3" #checkoutForm="ngForm">
+              <div class="col-lg-12">
+                <label for="firstLine" class="form-label">Address Line 1</label>
+                <input required type="text" class="form-control" id="firstLine" name="firstLine" placeholder="Enter Address Line 1" [(ngModel)]="shippingAddress.firstLine">
+              </div>
+              <div class="col-lg-6">
+                <label for="street" class="form-label">Street</label>
+                <input required type="text" class="form-control" id="street" name="street" placeholder="Enter Street" [(ngModel)]="shippingAddress.street">
+              </div>
+              <div class="col-lg-6">
+                <label for="city" class="form-label">City</label>
+                <input required type="text" class="form-control" id="city" name="city" placeholder="Enter City" [(ngModel)]="shippingAddress.city">
+              </div>
+              <div class="col-lg-6">
+                <label for="state" class="form-label">State</label>
+                <input required type="text" class="form-control" id="state" name="state" placeholder="Enter State" [(ngModel)]="shippingAddress.state">
+              </div>
+              <div class="col-lg-6">
+                <label for="postcode" class="form-label">Postcode</label>
+                <input required type="text" class="form-control" id="postcode" name="postcode" placeholder="Enter Postcode" [(ngModel)]="shippingAddress.postalCode">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card product-checkout-details mt-5 mt-lg-0">
+            <div class="card-body">
+              <h4 class="card-title mb-4 border-bottom pb-3">Order Summary</h4>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="media">
+                  <div class="media-body">
+                    <ng-container *ngFor="let item of cartItems">
+                      <table>
+                        <tbody>
+                        <tr>
+                          <td><p class="mt-0 mb-1" width="60%"> {{ item.product.name }}</p></td>
+                          <td><p class="text-muted mb-0"> &#8377;{{ item.product.price }} x {{ item.quantity }}</p></td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="list-group summary-prices mb-4">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span>Subtotal:</span>
+                  <span class="h6">&#8377;{{totalAmount}}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span>Shipping:</span>
+                  <span class="h6">Free</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span>Total</span>
+                  <span class="h5">&#8377;{{totalAmount}}</span>
+                </li>
+              </ul>
+              <div>
+                <button class="btn btn-primary btn-block" [disabled]="!checkoutForm.valid" (click)="proceedToPay()">Proceed to Pay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>

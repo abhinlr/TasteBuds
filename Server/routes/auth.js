@@ -77,6 +77,16 @@ router.post('/saveAddress', function (req, res) {
         });
 });
 
+router.post('/create-checkout-session', function (req, res) {
+    authController.payStripe(req.body.total)
+        .then(data => {
+            res.status(201).json({success: true, data: data});
+        })
+        .catch(err => {
+            res.json({success: false, error: err});
+        });
+});
+
 
 
 

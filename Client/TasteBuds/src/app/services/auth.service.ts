@@ -104,4 +104,8 @@ export class AuthService{
     return this.http.post<any>(apiConfig.saveAddress,{address:address});
   }
 
+  proceedToPay(total:number){
+    return this.http.post<any>(apiConfig.payStripe,{total:total});
+  }
+
 }

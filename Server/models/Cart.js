@@ -20,6 +20,10 @@ const cartSchema = new mongoose.Schema({
         ref: 'User'
     },
     items: [cartItemSchema],
+    total:{
+        type:Number,
+        default: 0
+    },
     createdAt: {
         type: Date,
         default: Date.now
@@ -28,6 +32,24 @@ const cartSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     }
+});
+
+// Pre-save middleware to calculate total
+cartSchema.pre('save', async function(next) {
+    let total = 0;
+    for (const item of this.items) {
+        try {
+            const product = await mongoose.model('Product').findById(item.product);
+            if (product) {
+                total += product.price * item.quantity;
+            }
+        } catch (error) {
+            console.error('Error while calculating total:', error);
+            return next(error);
+        }
+    }
+    this.total = total;
+    next();
 });
 
 const Cart = mongoose.model('Cart', cartSchema);

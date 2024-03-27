@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 require('../../../Client/TasteBuds/.env');
+const stripe = require('stripe')(process.env.STRIPE_KEY);
 
 exports.signUp = async (userData) => {
     const {fullName, email, password} = userData.data;
@@ -150,5 +151,26 @@ exports.saveAddress = async (address,user) => {
     }
 };
 
+exports.payStripe = async (total) => {
+    const session = await stripe.checkout.sessions.create({
+        line_items: [
+            {
+                price_data: {
+                    currency: 'inr',
+                    product_data: {
+                        name: 'T-shirt',
+                    },
+                    unit_amount: total*100,
+                },
+                quantity: 1,
+            },
+        ],
+        mode: 'payment',
+        success_url: 'http://localhost:4200/success',
+        cancel_url: 'http://localhost:4200/cancel',
+    });
+    return {url:session.url};
+
+};
 
 

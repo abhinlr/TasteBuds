@@ -27,7 +27,7 @@ export class CartComponent implements OnInit{
         if(response.success && response.data){
           this.siteService.loading.next(false);
           this.cartItems = response.data.items;
-          this.calculateTotal();
+          this.cartTotal = response.data.total;
         }
       })
   }
@@ -49,7 +49,7 @@ export class CartComponent implements OnInit{
       .then((response)=>{
         if(response.success && response.data){
           this.cartItems = response.data.cart.items;
-          this.calculateTotal();
+          this.cartTotal = response.data.total;
         }
       })
   }
@@ -61,17 +61,8 @@ export class CartComponent implements OnInit{
         if(response.success && response.data){
           this.siteService.loading.next(false);
           this.cartItems = response.data.cart.items;
-          this.calculateTotal();
+          this.cartTotal = response.data.total;
         }
       })
   }
-
-  calculateTotal(){
-    this.cartTotal = 0;
-    this.cartItems.forEach((item:any)=>{
-      let itemTotal = item.product.price* item.quantity;
-      this.cartTotal += itemTotal;
-    })
-  }
-
 }

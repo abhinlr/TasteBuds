@@ -12,5 +12,6 @@ export const apiConfig = {
   logout:'api/logout',
   deleteCartItem:'api/deleteItem',
   updateItemQty:'api/updateQuantity',
-  saveAddress:'/api/saveAddress'
+  saveAddress:'api/saveAddress',
+  payStripe:'api/create-checkout-session'
 };
